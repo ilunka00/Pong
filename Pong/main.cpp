@@ -11,7 +11,6 @@ int main()
 {
 	RenderWindow window(VideoMode(700, 400), "Pong");
 	Ball ball;
-	ball.setCenterY(370);
 	Paddle paddleA;
 	Bot bot;
 
@@ -33,9 +32,16 @@ int main()
 			}
 		}
 
-		//logic
-		bot.setTimer(bot.getTimer() + bot.getClock()->getElapsedTime().asSeconds());
-		bot.getClock()->restart();
+
+		//logic for ball
+		ball.increaseTimer();
+		if (ball.getTimer() >= ball.getDelay()) {
+			ball.moveBall();
+			ball.setTimer(0);
+		}
+
+		//logic for bot
+		bot.increaseTimer();
 		if (bot.getTimer() >= bot.getDelay()) {
 			bot.botMoves(ball.getCenterY());
 			bot.setTimer(0);

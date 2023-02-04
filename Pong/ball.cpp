@@ -1,16 +1,16 @@
 #include <SFML/Graphics.hpp>
-#include <iostream>
 #include "image.cpp"
-#define DEFAULT_SPEED 1
+#include "timer.cpp"
+#define DEFAULT_SPEED 0
 
-class Ball:public Image {
+class Ball:public Image, public Timer {
 private:
 	int speedX;
 	int speedY;
 public:
 	Ball() {
 		speedX = DEFAULT_SPEED;
-		speedX = DEFAULT_SPEED;
+		speedY = DEFAULT_SPEED;
 		Img.loadFromFile("ball.png");
 		Sprite = sf::Sprite(Img);
 		centerX = 350;
@@ -19,10 +19,14 @@ public:
 
 	void start() {
 		srand(time(NULL));
+		setDelay(0.1);
 		speedX = rand() % 3 + 1;
 		speedY = rand() % 3 + 1;
-
 	}
-
+	
+	void moveBall() {
+		centerX += speedX;
+		centerY += speedY;
+	}
 
 };
