@@ -8,6 +8,7 @@ class Bot :public Paddle,public Timer {
 public:
 	Bot() {
 		centerX = 640;
+		setDelay(0.1);
 	}
 
 

@@ -1,14 +1,13 @@
 ﻿  ball.cpp
 C:\dev\Pong\Pong\image.cpp(13,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 C:\dev\Pong\Pong\image.cpp(13,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\dev\Pong\Pong\timer.cpp(13,1): warning C4305: =: усечение из "double" в "float"
-C:\dev\Pong\Pong\ball.cpp(21,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\dev\Pong\Pong\ball.cpp(22,1): warning C4305: аргумент: усечение из "double" в "float"
+C:\dev\Pong\Pong\ball.cpp(31,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\dev\Pong\Pong\ball.cpp(32,1): warning C4305: аргумент: усечение из "double" в "float"
   main.cpp
 C:\dev\Pong\Pong\image.cpp(13,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 C:\dev\Pong\Pong\image.cpp(13,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\dev\Pong\Pong\timer.cpp(13,1): warning C4305: =: усечение из "double" в "float"
-C:\dev\Pong\Pong\ball.cpp(21,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\dev\Pong\Pong\ball.cpp(22,1): warning C4305: аргумент: усечение из "double" в "float"
+C:\dev\Pong\Pong\ball.cpp(31,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\dev\Pong\Pong\ball.cpp(32,1): warning C4305: аргумент: усечение из "double" в "float"
+C:\dev\Pong\Pong\bot.cpp(11,1): warning C4305: аргумент: усечение из "double" в "float"
   Создание кода...
   Pong.vcxproj -> C:\dev\Pong\x64\Debug\Pong.exe

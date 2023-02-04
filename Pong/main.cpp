@@ -3,8 +3,6 @@
 #include "paddle.cpp"
 #include "bot.cpp"
 
-
-
 using namespace sf;
 
 int main()
@@ -13,7 +11,12 @@ int main()
 	Ball ball;
 	Paddle paddleA;
 	Bot bot;
+	int speedX=1, speedY=1;
+	int scorePlayer=0, scoreBot=0;
 
+	Texture zero;
+	zero.loadFromFile("zero.png");
+	Sprite sprite=Sprite(zero);
 	while (window.isOpen())
 	{
 		Event event;
@@ -27,7 +30,12 @@ int main()
 				if (event.key.code == Keyboard::Up) paddleA.move(Keyboard::Up);
 				else if (event.key.code == Keyboard::Down) paddleA.move(Keyboard::Down);
 				else if (event.key.code == Keyboard::Space) {
+#ifndef START
+#define START
 					ball.start();
+					speedX = ball.getSpeedX();
+					speedY = ball.getSpeedY();
+#endif
 				}
 			}
 		}
@@ -38,6 +46,16 @@ int main()
 		if (ball.getTimer() >= ball.getDelay()) {
 			ball.moveBall();
 			ball.setTimer(0);
+		}
+		if (ball.getCenterY() < 20) ball.setSpeedY(speedY);
+		else if(ball.getCenterY() > 380) ball.setSpeedY(-speedY);
+		if (ball.getCenterX() < 50) {
+			if (ball.paddleHit(paddleA)) ball.setSpeedX(speedX);
+			else ball.restart(); //goal
+		}
+		else if( ball.getCenterX() > 632) {			
+			if (ball.paddleHit(bot)) ball.setSpeedX(-speedX);
+			else ball.restart();//goal
 		}
 
 		//logic for bot
@@ -53,7 +71,9 @@ int main()
 		bot.setPosition(bot.getCenterX(), bot.getCenterY() - 45);
 
 		//draw
+
 		window.clear(Color::Black);
+		window.draw(sprite);
 		window.draw(paddleA.getSprite());
 		window.draw(ball.getSprite());
 		window.draw(bot.getSprite());

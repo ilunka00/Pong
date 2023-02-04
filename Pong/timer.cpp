@@ -10,7 +10,7 @@ public:
 	Timer() {
 		clock = sf::Clock();
 		timer = 0;
-		delay = 0.1;
+		delay = 0;
 	}
 	void setTimer(float secs) {
 		timer = secs;
