@@ -1,22 +1,28 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 #include "image.cpp"
-#define DEFAULT_SPEED 5
+#define DEFAULT_SPEED 1
 
 class Ball:public Image {
 private:
-	int speed;
-
+	int speedX;
+	int speedY;
 public:
 	Ball() {
-		speed = DEFAULT_SPEED;
+		speedX = DEFAULT_SPEED;
+		speedX = DEFAULT_SPEED;
 		Img.loadFromFile("ball.png");
 		Sprite = sf::Sprite(Img);
 		centerX = 350;
 		centerY = 200;
 	}
-	void setSpeed(int newSpeed) {
-		if (newSpeed > 10 || newSpeed < 1) return;
-		speed = newSpeed;
+
+	void start() {
+		srand(time(NULL));
+		speedX = rand() % 3 + 1;
+		speedY = rand() % 3 + 1;
+
 	}
-	
+
+
 };

@@ -1,3 +1,6 @@
+#ifndef PADDLE
+#define PADDLE
+
 #include <SFML/Graphics.hpp>
 #include "image.cpp"
 
@@ -19,3 +22,5 @@ public:
 		}
 	}
 };
+
+#endif
