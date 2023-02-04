@@ -11,6 +11,8 @@ public:
 		speed = DEFAULT_SPEED;
 		Img.loadFromFile("ball.png");
 		Sprite = sf::Sprite(Img);
+		centerX = 350;
+		centerY = 200;
 	}
 	void setSpeed(int newSpeed) {
 		if (newSpeed > 10 || newSpeed < 1) return;

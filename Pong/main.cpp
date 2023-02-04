@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+//#include <iostream>
 #include "ball.cpp"
 #include "paddle.cpp"
 
@@ -9,7 +10,8 @@ int main()
 	RenderWindow window(VideoMode(700, 400), "Pong");
 	Ball ball;
 	Paddle paddleA;
-	int centerX = 336, centerY = 185;
+	int ballCenterX = 336, ballCenterY = 185;
+	int paddleAx = 30, paddleAy = 155;
 	while (window.isOpen())
 	{
 		Event event;
@@ -18,9 +20,13 @@ int main()
 
 			if (event.type == Event::Closed)
 				window.close();
+			if (event.type == Event::KeyPressed) {
+				if (event.key.code == Keyboard::Up) paddleA.move(Keyboard::Up);
+				else if (event.key.code == Keyboard::Down) paddleA.move(Keyboard::Down);
+			}
 		}
-		ball.setPosition(centerX, centerY);
-		paddleA.setPosition(30, 155);
+		ball.setPosition(ballCenterX, ballCenterY);
+		paddleA.setPosition(paddleA.getCenterX(), paddleA.getCenterY() - 45);
 		window.clear(Color::Black);
 		window.draw(paddleA.getSprite());
 		window.draw(ball.getSprite());

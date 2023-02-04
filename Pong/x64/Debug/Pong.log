@@ -1,2 +1,14 @@
-﻿  main.cpp
+﻿  ball.cpp
+C:\dev\Pong\Pong\image.cpp(13,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(13,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  image.cpp
+C:\dev\Pong\Pong\image.cpp(13,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(13,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  main.cpp
+C:\dev\Pong\Pong\image.cpp(13,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(13,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  paddle.cpp
+C:\dev\Pong\Pong\image.cpp(13,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(13,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  Создание кода...
   Pong.vcxproj -> C:\dev\Pong\x64\Debug\Pong.exe
