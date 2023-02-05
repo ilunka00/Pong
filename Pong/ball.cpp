@@ -1,16 +1,19 @@
-#include <SFML/Graphics.hpp>
+#include "Paddle.cpp"
 #include "image.cpp"
 #include "timer.cpp"
-#include "Paddle.cpp"
+#include <SFML/Graphics.hpp>
 
 #define DEFAULT_SPEED 0
 
-class Ball:public Image, public Timer {
+class Ball : public Image, public Timer
+{
 private:
 	int speedX;
 	int speedY;
+
 public:
-	Ball() {
+	Ball()
+	{
 		speedX = DEFAULT_SPEED;
 		speedY = DEFAULT_SPEED;
 		Img.loadFromFile("ball.png");
@@ -19,7 +22,8 @@ public:
 		centerY = 200;
 	}
 
-	void restart() {
+	void restart()
+	{
 		centerX = 350;
 		centerY = 200;
 		speedX = DEFAULT_SPEED;
@@ -27,33 +31,41 @@ public:
 #undef START
 	}
 
-	void start() {
+	void start()
+	{
 		srand(time(NULL));
 		setDelay(0.015);
 		speedX = rand() % 3 + 1;
 		speedY = rand() % 3 + 1;
 	}
-	
-	void moveBall() {
+
+	void moveBall()
+	{
 		centerX += speedX;
 		centerY += speedY;
 	}
-	int getSpeedX() {
+	int getSpeedX()
+	{
 		return speedX;
 	}
-	int getSpeedY() {
+	int getSpeedY()
+	{
 		return speedY;
 	}
-	void setSpeedX(int a) {
+	void setSpeedX(int a)
+	{
 		speedX = a;
 	}
-	void setSpeedY(int a) {
+	void setSpeedY(int a)
+	{
 		speedY = a;
 	}
 
-	bool paddleHit(Paddle paddle) {
-		if (centerY >= paddle.getCenterY() - 45 && centerY <= paddle.getCenterY() + 45)
+	bool paddleHit(Paddle paddle)
+	{
+		if(centerY >= paddle.getCenterY() - 45 && centerY <= paddle.getCenterY() + 45)
 			return true;
-		else return false;
+		else
+			return false;
 	}
 };

@@ -145,6 +145,9 @@
     <ClCompile Include="stats.cpp" />
     <ClCompile Include="timer.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".clang-format" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

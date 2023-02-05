@@ -3,34 +3,44 @@
 
 #include <SFML/Graphics.hpp>
 
-class Image {
+class Image
+{
 protected:
 	sf::Texture Img;
 	sf::Sprite Sprite;
 	int centerX, centerY;
+
 public:
-	void setPosition(int a, int b) {
+	void setPosition(int a, int b)
+	{
 		Sprite.setPosition(a, b);
 	}
-	sf::Texture getTexture() {
+	sf::Texture getTexture()
+	{
 		return Img;
 	}
-	sf::Sprite getSprite() {
+	sf::Sprite getSprite()
+	{
 		return Sprite;
 	}
-	int getCenterX() {
+	int getCenterX()
+	{
 		return centerX;
 	}
-	int getCenterY() {
+	int getCenterY()
+	{
 		return centerY;
 	}
-	void setCenterY(int y) {
+	void setCenterY(int y)
+	{
 		centerY = y;
 	}
-	void setCenterX(int x) {
+	void setCenterX(int x)
+	{
 		centerX = x;
 	}
-	void loadFromFile(std::string path) {
+	void loadFromFile(std::string path)
+	{
 		Img.loadFromFile(path);
 		Sprite = sf::Sprite(Img);
 	}

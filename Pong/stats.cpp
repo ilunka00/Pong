@@ -1,15 +1,17 @@
+#include "image.cpp"
 #include <SFML/Graphics.hpp>
 #include <vector>
-#include "image.cpp"
 
-
-class Statistics {
-	std::vector <std::string>  names;
+class Statistics
+{
+	std::vector<std::string> names;
 	sf::Texture botTexture, playerTexture;
 	sf::Sprite botSprite, playerSprite;
 	int scorePlayer, scoreBot;
+
 public:
-	Statistics() {
+	Statistics()
+	{
 		scoreBot = 0;
 		scorePlayer = 0;
 		names.push_back("one.png");
@@ -23,32 +25,39 @@ public:
 		playerSprite = sf::Sprite(playerTexture);
 	}
 
-	int getScorePlayer() {
+	int getScorePlayer()
+	{
 		return scorePlayer;
 	}
-	int getScoreBot() {
+	int getScoreBot()
+	{
 		return scoreBot;
 	}
 
-	void botGoal() {
+	void botGoal()
+	{
 		botTexture.loadFromFile(names[scoreBot]);
 		botSprite = sf::Sprite(botTexture);
 		scoreBot++;
 	}
 
-	void playerGoal() {
+	void playerGoal()
+	{
 		playerTexture.loadFromFile(names[scorePlayer]);
 		playerSprite = sf::Sprite(playerTexture);
 		scorePlayer++;
 	}
-	
-	sf::Sprite getSpriteBot() {
+
+	sf::Sprite getSpriteBot()
+	{
 		return botSprite;
 	}
-	sf::Sprite getSpritePlayer() {
+	sf::Sprite getSpritePlayer()
+	{
 		return playerSprite;
 	}
-	void setPosition() {
+	void setPosition()
+	{
 		botSprite.setPosition(225, 5);
 		playerSprite.setPosition(400, 5);
 	}

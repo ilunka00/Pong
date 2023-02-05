@@ -2,31 +2,39 @@
 #define TIMER
 #include <SFML/Graphics.hpp>
 
-class Timer {
+class Timer
+{
 private:
 	sf::Clock clock;
 	float timer, delay;
+
 public:
-	Timer() {
+	Timer()
+	{
 		clock = sf::Clock();
 		timer = 0;
 		delay = 0;
 	}
-	void setTimer(float secs) {
+	void setTimer(float secs)
+	{
 		timer = secs;
 	}
-	float getTimer() {
+	float getTimer()
+	{
 		return timer;
 	}
-	float getDelay() {
+	float getDelay()
+	{
 		return delay;
 	}
 
-	void increaseTimer() {
+	void increaseTimer()
+	{
 		timer += clock.getElapsedTime().asSeconds();
 		clock.restart();
 	}
-	void setDelay(float newDelay) {
+	void setDelay(float newDelay)
+	{
 		delay = newDelay;
 	}
 };
