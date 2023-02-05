@@ -30,6 +30,10 @@ public:
 	void setCenterX(int x) {
 		centerX = x;
 	}
+	void loadFromFile(std::string path) {
+		Img.loadFromFile(path);
+		Sprite = sf::Sprite(Img);
+	}
 };
 
 #endif

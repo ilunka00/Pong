@@ -2,6 +2,7 @@
 #include "ball.cpp"
 #include "paddle.cpp"
 #include "bot.cpp"
+#include "stats.cpp"
 
 using namespace sf;
 
@@ -11,12 +12,9 @@ int main()
 	Ball ball;
 	Paddle paddleA;
 	Bot bot;
+	Statistics stats;
 	int speedX=1, speedY=1;
-	int scorePlayer=0, scoreBot=0;
-
-	Texture zero;
-	zero.loadFromFile("zero.png");
-	Sprite sprite=Sprite(zero);
+	stats.setPosition();
 	while (window.isOpen())
 	{
 		Event event;
@@ -49,13 +47,27 @@ int main()
 		}
 		if (ball.getCenterY() < 20) ball.setSpeedY(speedY);
 		else if(ball.getCenterY() > 380) ball.setSpeedY(-speedY);
-		if (ball.getCenterX() < 50) {
+		if (ball.getCenterX() < 70) {
 			if (ball.paddleHit(paddleA)) ball.setSpeedX(speedX);
-			else ball.restart(); //goal
+			else {
+				ball.restart();
+				stats.playerGoal();
+				stats.setPosition();
+				if (stats.getScorePlayer() == 5) {
+					return 0;
+				}
+			}
 		}
 		else if( ball.getCenterX() > 632) {			
 			if (ball.paddleHit(bot)) ball.setSpeedX(-speedX);
-			else ball.restart();//goal
+			else {
+				ball.restart();
+				stats.botGoal();
+				stats.setPosition();
+				if (stats.getScoreBot() == 5) {
+					return 0;
+				}
+			}
 		}
 
 		//logic for bot
@@ -71,9 +83,9 @@ int main()
 		bot.setPosition(bot.getCenterX(), bot.getCenterY() - 45);
 
 		//draw
-
 		window.clear(Color::Black);
-		window.draw(sprite);
+		window.draw(stats.getSpriteBot());
+		window.draw(stats.getSpritePlayer());
 		window.draw(paddleA.getSprite());
 		window.draw(ball.getSprite());
 		window.draw(bot.getSprite());
