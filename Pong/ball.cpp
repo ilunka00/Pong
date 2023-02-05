@@ -63,7 +63,7 @@ public:
 
 	bool paddleHit(Paddle paddle)
 	{
-		if(centerY >= paddle.getCenterY() - 45 && centerY <= paddle.getCenterY() + 45)
+		if (centerY >= paddle.getCenterY() - 45 && centerY <= paddle.getCenterY() + 45)
 			return true;
 		else
 			return false;

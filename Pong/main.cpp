@@ -3,8 +3,11 @@
 #include "paddle.cpp"
 #include "stats.cpp"
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 using namespace sf;
+
+void playSound(std::string);
 
 int main()
 {
@@ -14,7 +17,13 @@ int main()
 	Bot bot;
 	Statistics stats;
 	int speedX = 1, speedY = 1;
+	SoundBuffer buf;
+	Sound sound;
 	stats.setPosition();
+	Music mTheme;
+	if(!mTheme.openFromFile("music.wav"))
+		return -1;
+	mTheme.play();
 	while(window.isOpen())
 	{
 		Event event;
@@ -48,18 +57,45 @@ int main()
 			ball.setTimer(0);
 		}
 		if(ball.getCenterY() < 20)
+		{
+			if (ball.getSpeedY() != speedY)
+			{
+				buf.loadFromFile("sideHit.wav");
+				sound = Sound(buf);
+				sound.play();
+			}
 			ball.setSpeedY(speedY);
+		}
 		else if(ball.getCenterY() > 380)
+		{
+			if(ball.getSpeedY() != -speedY)
+			{
+				buf.loadFromFile("sideHit.wav");
+				sound = Sound(buf);
+				sound.play();
+			}
 			ball.setSpeedY(-speedY);
+		}
 		if(ball.getCenterX() < 70)
 		{
 			if(ball.paddleHit(paddleA))
+			{
+				if(ball.getSpeedY() != speedX)
+				{
+					buf.loadFromFile("paddlehit.wav");
+					sound = Sound(buf);
+					sound.play();
+				}
 				ball.setSpeedX(speedX);
+			}
 			else
 			{
 				ball.restart();
 				stats.playerGoal();
 				stats.setPosition();
+				buf.loadFromFile("goal.wav");
+				sound = Sound(buf);
+				sound.play();
 				if(stats.getScorePlayer() == 5)
 				{
 					return 0;
@@ -69,12 +105,23 @@ int main()
 		else if(ball.getCenterX() > 632)
 		{
 			if(ball.paddleHit(bot))
+			{
+				if(ball.getSpeedY() != -speedX)
+				{
+					buf.loadFromFile("paddlehit.wav");
+					sound = Sound(buf);
+					sound.play();
+				}
 				ball.setSpeedX(-speedX);
+			}
 			else
 			{
 				ball.restart();
 				stats.botGoal();
 				stats.setPosition();
+				buf.loadFromFile("goal.wav");
+				sound = Sound(buf);
+				sound.play();
 				if(stats.getScoreBot() == 5)
 				{
 					return 0;
@@ -94,6 +141,8 @@ int main()
 		ball.setPosition(ball.getCenterX() - 14, ball.getCenterY() - 15);
 		paddleA.setPosition(paddleA.getCenterX(), paddleA.getCenterY() - 45);
 		bot.setPosition(bot.getCenterX(), bot.getCenterY() - 45);
+		if(mTheme.getStatus() != sf::Music::Status::Playing)
+			mTheme.play();
 
 		// draw
 		window.clear(Color::Black);
@@ -107,3 +156,4 @@ int main()
 
 	return 0;
 }
+
