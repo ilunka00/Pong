@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
+
 class Image
 {
 protected:
@@ -45,5 +46,4 @@ public:
 		Sprite = sf::Sprite(Img);
 	}
 };
-
 #endif

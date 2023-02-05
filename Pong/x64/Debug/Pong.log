@@ -1,6 +1,6 @@
 ﻿  main.cpp
-C:\dev\Pong\Pong\image.cpp(16,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\dev\Pong\Pong\image.cpp(16,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 C:\dev\Pong\Pong\ball.cpp(36,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 C:\dev\Pong\Pong\ball.cpp(37,1): warning C4305: аргумент: усечение из "double" в "float"
 C:\dev\Pong\Pong\bot.cpp(12,1): warning C4305: аргумент: усечение из "double" в "float"

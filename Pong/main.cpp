@@ -1,5 +1,6 @@
 #include "ball.cpp"
 #include "bot.cpp"
+#include "image.cpp"
 #include "paddle.cpp"
 #include "stats.cpp"
 #include <SFML/Graphics.hpp>
@@ -12,6 +13,10 @@ void playSound(std::string);
 int main()
 {
 	RenderWindow window(VideoMode(700, 400), "Pong");
+	Texture start1;
+	start1.loadFromFile("start.png");
+	Sprite start = Sprite(start1);
+	start.setPosition(175, 75);
 	Ball ball;
 	Paddle paddleA;
 	Bot bot;
@@ -24,6 +29,7 @@ int main()
 	if(!mTheme.openFromFile("music.wav"))
 		return -1;
 	mTheme.play();
+
 	while(window.isOpen())
 	{
 		Event event;
@@ -40,7 +46,7 @@ int main()
 				else if(event.key.code == Keyboard::Space)
 				{
 #ifndef START
-#	define START
+#define START
 					ball.start();
 					speedX = ball.getSpeedX();
 					speedY = ball.getSpeedY();
@@ -151,6 +157,8 @@ int main()
 		window.draw(paddleA.getSprite());
 		window.draw(ball.getSprite());
 		window.draw(bot.getSprite());
+		if(ball.getSpeedX() == 0)
+				window.draw(start);
 		window.display();
 	}
 
