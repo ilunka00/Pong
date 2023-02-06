@@ -13,9 +13,12 @@ void playSound(std::string);
 int main()
 {
 	RenderWindow window(VideoMode(700, 400), "Pong");
-	Texture start1;
+	Texture start1, arrows1;
+	arrows1.loadFromFile("arrows.png");
 	start1.loadFromFile("start.png");
 	Sprite start = Sprite(start1);
+	Sprite arrows = Sprite(arrows1);
+	arrows.setPosition(75, 275);
 	start.setPosition(175, 75);
 	Ball ball;
 	Paddle paddleA;
@@ -45,12 +48,12 @@ int main()
 					paddleA.move(Keyboard::Down);
 				else if(event.key.code == Keyboard::Space)
 				{
-#ifndef START
-#define START
-					ball.start();
-					speedX = ball.getSpeedX();
-					speedY = ball.getSpeedY();
-#endif
+					if(ball.getSpeedX() == 0)
+					{
+						ball.start();
+						speedX = ball.getSpeedX();
+						speedY = ball.getSpeedY();
+					}
 				}
 			}
 		}
@@ -147,8 +150,6 @@ int main()
 		ball.setPosition(ball.getCenterX() - 14, ball.getCenterY() - 15);
 		paddleA.setPosition(paddleA.getCenterX(), paddleA.getCenterY() - 45);
 		bot.setPosition(bot.getCenterX(), bot.getCenterY() - 45);
-		if(mTheme.getStatus() != sf::Music::Status::Playing)
-			mTheme.play();
 
 		// draw
 		window.clear(Color::Black);
@@ -158,7 +159,10 @@ int main()
 		window.draw(ball.getSprite());
 		window.draw(bot.getSprite());
 		if(ball.getSpeedX() == 0)
-				window.draw(start);
+		{
+			window.draw(start);
+			window.draw(arrows);
+		}
 		window.display();
 	}
 
