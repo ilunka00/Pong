@@ -4,28 +4,46 @@
 #include "image.cpp"
 #include <SFML/Graphics.hpp>
 
-class Paddle : public Image
+class Paddle
 {
+protected:
+	Image paddleModel;
 
 public:
 	Paddle()
 	{
-		Img.loadFromFile("paddle.png");
-		Sprite = sf::Sprite(Img);
-		centerX = 30;
-		centerY = 200;
+		paddleModel.loadFromFile("paddle.png");
+		paddleModel.setCenterX(30);
+		paddleModel.setCenterY(200);
+	}
+	void setPosition(int newPositionX, int newPositionY)
+	{
+		paddleModel.setPosition(newPositionX, newPositionY);
+	}
+	int getCenterY() 
+	{ 
+		return paddleModel.getCenterY();
+	}
+	int getCenterX()
+	{
+		return paddleModel.getCenterX();
+	}
+	sf::Sprite getSprite()
+	{
+		return paddleModel.getSprite();
 	}
 	void move(sf::Keyboard::Key key)
 	{
+		int oldCenterY = paddleModel.getCenterY();
 		if(key == sf::Keyboard::Key::Up)
 		{
-			if(centerY > 40)
-				centerY -= 5;
+			if(paddleModel.getCenterY() > 40)
+				paddleModel.setCenterY(oldCenterY - 5);
 		}
 		else if(key == sf::Keyboard::Key::Down)
 		{
-			if(centerY < 360)
-				centerY += 5;
+			if(paddleModel.getCenterY() < 360)
+				paddleModel.setCenterY(oldCenterY + 5);
 		}
 	}
 };

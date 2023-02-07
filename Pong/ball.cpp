@@ -5,30 +5,29 @@
 
 #define DEFAULT_SPEED 0
 
-class Ball : public Image, public Timer
+class Ball : public Timer
 {
 private:
+	Image ballModel;
 	int speedX;
 	int speedY;
 
 public:
 	Ball()
 	{
+		ballModel.loadFromFile("ball.png");
 		speedX = DEFAULT_SPEED;
 		speedY = DEFAULT_SPEED;
-		Img.loadFromFile("ball.png");
-		Sprite = sf::Sprite(Img);
-		centerX = 350;
-		centerY = 200;
+		ballModel.setCenterX(350);
+		ballModel.setCenterY(200);
 	}
 
 	void restart()
 	{
-		centerX = 350;
-		centerY = 200;
+		ballModel.setCenterX(350);
+		ballModel.setCenterY(200);
 		speedX = DEFAULT_SPEED;
 		speedY = DEFAULT_SPEED;
-#undef START
 	}
 
 	void start()
@@ -41,29 +40,51 @@ public:
 
 	void moveBall()
 	{
-		centerX += speedX;
-		centerY += speedY;
+		int oldBallCenterX = ballModel.getCenterX();
+		int oldBallCenterY = ballModel.getCenterY();
+		ballModel.setCenterX(oldBallCenterX+speedX);
+		ballModel.setCenterY(oldBallCenterY+speedY);
+	}
+	sf::Sprite getSprite() 
+	{
+		return ballModel.getSprite();
 	}
 	int getSpeedX()
 	{
 		return speedX;
 	}
+
 	int getSpeedY()
 	{
 		return speedY;
 	}
+
 	void setSpeedX(int a)
 	{
 		speedX = a;
 	}
+
 	void setSpeedY(int a)
 	{
 		speedY = a;
 	}
+	void setPosition(int newPositionX,int newPositionY) 
+	{
+		ballModel.setPosition(newPositionX, newPositionY);
+	}
+	int getCenterX()
+	{
+		return ballModel.getCenterX();
+	}
+	int getCenterY()
+	{
+		return ballModel.getCenterY();
+	}
 
 	bool paddleHit(Paddle paddle)
 	{
-		if (centerY >= paddle.getCenterY() - 45 && centerY <= paddle.getCenterY() + 45)
+		if(ballModel.getCenterY() >= paddle.getCenterY() - 45 &&
+		   ballModel.getCenterY() <= paddle.getCenterY() + 45)
 			return true;
 		else
 			return false;

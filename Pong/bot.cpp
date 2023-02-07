@@ -8,15 +8,15 @@ class Bot : public Paddle, public Timer
 public:
 	Bot()
 	{
-		centerX = 640;
+		paddleModel.setCenterX(640);
 		setDelay(0.1);
 	}
 
 	void botMoves(int ballCenterY)
 	{
-		if(ballCenterY > centerY)
+		if(ballCenterY > paddleModel.getCenterY())
 			move(sf::Keyboard::Key::Down);
-		else if(ballCenterY < centerY)
+		else if(ballCenterY < paddleModel.getCenterY())
 			move(sf::Keyboard::Key::Up);
 	}
 };
