@@ -24,7 +24,7 @@
     <ClCompile Include="paddle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="image.cpp">
+    <ClCompile Include="model.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="bot.cpp">
@@ -34,6 +34,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="stats.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="view.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

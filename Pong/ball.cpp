@@ -1,5 +1,5 @@
 #include "Paddle.cpp"
-#include "image.cpp"
+#include "model.cpp"
 #include "timer.cpp"
 #include <SFML/Graphics.hpp>
 
@@ -8,7 +8,7 @@
 class Ball : public Timer
 {
 private:
-	Image ballModel;
+	Model ballModel;
 	int speedX;
 	int speedY;
 
@@ -80,7 +80,10 @@ public:
 	{
 		return ballModel.getCenterY();
 	}
-
+	Model getModel() 
+	{
+		return ballModel;
+	}
 	bool paddleHit(Paddle paddle)
 	{
 		if(ballModel.getCenterY() >= paddle.getCenterY() - 45 &&

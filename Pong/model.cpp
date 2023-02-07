@@ -1,10 +1,10 @@
-#ifndef IMAGECPP
-#define IMAGECPP
+#ifndef MODEL
+#define MODEL
 
 #include <SFML/Graphics.hpp>
 
 
-class Image
+class Model
 {
 protected:
 	sf::Texture Img;

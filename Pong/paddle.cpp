@@ -1,13 +1,13 @@
 #ifndef PADDLE
 #define PADDLE
 
-#include "image.cpp"
+#include "model.cpp"
 #include <SFML/Graphics.hpp>
 
 class Paddle
 {
 protected:
-	Image paddleModel;
+	Model paddleModel;
 
 public:
 	Paddle()

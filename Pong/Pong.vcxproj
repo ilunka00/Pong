@@ -139,11 +139,12 @@
   <ItemGroup>
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="bot.cpp" />
-    <ClCompile Include="image.cpp" />
+    <ClCompile Include="model.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="paddle.cpp" />
     <ClCompile Include="stats.cpp" />
     <ClCompile Include="timer.cpp" />
+    <ClCompile Include="view.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".clang-format" />

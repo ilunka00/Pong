@@ -1,8 +1,9 @@
 #include "ball.cpp"
 #include "bot.cpp"
-#include "image.cpp"
+#include "model.cpp"
 #include "paddle.cpp"
 #include "stats.cpp"
+#include "view.cpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
@@ -158,6 +159,7 @@ int main()
 		window.draw(paddleA.getSprite());
 		window.draw(ball.getSprite());
 		window.draw(bot.getSprite());
+		view.drawAnObject(window, ball.getModel());
 		if(ball.getSpeedX() == 0)
 		{
 			window.draw(start);
