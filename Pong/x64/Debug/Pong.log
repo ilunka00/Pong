@@ -1,11 +1,143 @@
-﻿  main.cpp
-C:\dev\Pong\Pong\model.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\dev\Pong\Pong\model.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\dev\Pong\Pong\ball.cpp(35,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\dev\Pong\Pong\ball.cpp(36,1): warning C4305: аргумент: усечение из "double" в "float"
-C:\dev\Pong\Pong\bot.cpp(12,1): warning C4305: аргумент: усечение из "double" в "float"
+﻿  ballModel.cpp
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  botPaddleModel.cpp
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  controller.cpp
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(34,20): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(35,20): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(40,41): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(41,58): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(41,31): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(49,41): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(50,58): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(50,31): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(58,17): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(59,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(60,17): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(71,27): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(72,27): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(73,44): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(73,28): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(81,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(82,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(83,48): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(83,32): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+  game.cpp
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(34,20): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(35,20): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(40,41): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(41,58): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(41,31): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(49,41): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(50,58): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(50,31): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(58,17): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(59,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(60,17): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(71,27): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(72,27): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(73,44): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(73,28): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(81,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(82,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(83,48): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(83,32): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(44,16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(46,32): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\dev\Pong\Pong\game.cpp(60,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(61,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(74,21): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(88,21): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  image.cpp
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  main.cpp
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(34,20): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(35,20): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(40,41): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(41,58): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(41,31): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(49,41): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(50,58): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(50,31): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(58,17): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(59,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(60,17): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(71,27): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(72,27): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(73,44): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(73,28): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(81,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(82,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(83,48): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\controller.cpp(83,32): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(44,16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(46,32): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\dev\Pong\Pong\game.cpp(60,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(61,18): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(74,21): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\game.cpp(88,21): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  model.cpp
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  playerPaddleModel.cpp
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  stats.cpp
   view.cpp
-C:\dev\Pong\Pong\model.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\dev\Pong\Pong\model.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(17,22): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(29,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(33,10): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(37,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\dev\Pong\Pong\image.cpp(41,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
   Создание кода...
   Pong.vcxproj -> C:\dev\Pong\x64\Debug\Pong.exe

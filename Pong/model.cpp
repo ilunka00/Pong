@@ -1,49 +1,34 @@
 #ifndef MODEL
 #define MODEL
-
+#include "ballModel.cpp"
+#include "botPaddleModel.cpp"
+#include "playerPaddleModel.cpp"
+#include "image.cpp"
 #include <SFML/Graphics.hpp>
-
-
-class Model
+class Model : public BallModel, public BotPaddleModel, public PlayerPaddleModel
 {
-protected:
-	sf::Texture Img;
-	sf::Sprite Sprite;
-	int centerX, centerY;
-
 public:
-	void setPosition(int a, int b)
+	Model() 
 	{
-		Sprite.setPosition(a, b);
+		ballModel.loadFromFile("ball.png");
+		botPaddleModel.loadFromFile("paddle.png");
+		playerPaddleModel.loadFromFile("paddle.png");
+		ballModel.setCenterX(350);
+		ballModel.setCenterY(200);
+		ballModel.setPosition(350, 200);
+		botPaddleModel.setPosition(640, 200);
+		playerPaddleModel.setPosition(30, 200);
 	}
-	sf::Texture getTexture()
+	void setup()
 	{
-		return Img;
+		ballModel.loadFromFile("ball.png");
+		botPaddleModel.loadFromFile("paddle.png");
+		playerPaddleModel.loadFromFile("paddle.png");
+		ballModel.setCenterX(350);
+		ballModel.setCenterY(200);
+		ballModel.setPosition(350-14, 200-15);
+		botPaddleModel.setPosition(640, 200-45);
+		playerPaddleModel.setPosition(30, 200-45);
 	}
-	sf::Sprite getSprite()
-	{
-		return Sprite;
-	}
-	int getCenterX()
-	{
-		return centerX;
-	}
-	int getCenterY()
-	{
-		return centerY;
-	}
-	void setCenterY(int y)
-	{
-		centerY = y;
-	}
-	void setCenterX(int x)
-	{
-		centerX = x;
-	}
-	void loadFromFile(std::string path)
-	{
-		Img.loadFromFile(path);
-		Sprite = sf::Sprite(Img);
-	}
-};
+	};
 #endif

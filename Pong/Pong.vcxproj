@@ -137,13 +137,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ball.cpp" />
-    <ClCompile Include="bot.cpp" />
-    <ClCompile Include="model.cpp" />
+    <ClCompile Include="ballModel.cpp" />
+    <ClCompile Include="botPaddleModel.cpp" />
+    <ClCompile Include="controller.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="image.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="paddle.cpp" />
+    <ClCompile Include="model.cpp" />
+    <ClCompile Include="playerPaddleModel.cpp" />
     <ClCompile Include="stats.cpp" />
-    <ClCompile Include="timer.cpp" />
     <ClCompile Include="view.cpp" />
   </ItemGroup>
   <ItemGroup>
