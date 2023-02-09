@@ -3,13 +3,12 @@
 
 #include <SFML/Graphics.hpp>
 
-
 class Image
 {
 protected:
 	sf::Texture img;
 	sf::Sprite sprite;
-	float centerX=0, centerY=0;
+	float centerX = 0, centerY = 0;
 
 public:
 	void setSpritePosition(int a, int b)

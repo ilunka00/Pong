@@ -1,6 +1,6 @@
 #ifndef BALL_MODEL
 #define BALL_MODEL
-#include"image.cpp"
+#include "image.cpp"
 class BallModel
 {
 protected:
@@ -24,7 +24,7 @@ public:
 	}
 	void setImageBall(Image newBall)
 	{
-		ballModel=newBall;
+		ballModel = newBall;
 	}
 };
 #endif

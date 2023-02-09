@@ -30,7 +30,7 @@ public:
 	}
 	void movePlayerPaddle(sf::Keyboard::Key keyPressed)
 	{
-		Image* paddleToMove=allObjects.getPlayerPaddleImageAddr();
+		Image* paddleToMove = allObjects.getPlayerPaddleImageAddr();
 		float paddlePosY = paddleToMove->getCenterY();
 		float paddlePosX = paddleToMove->getCenterX();
 		if(keyPressed == sf::Keyboard::Up)
@@ -38,7 +38,7 @@ public:
 			if(paddlePosY > 40)
 			{
 				paddleToMove->setCenterY(paddlePosY - 5);
-				paddleToMove->setSpritePosition(paddlePosX, paddlePosY - 5 -45);
+				paddleToMove->setSpritePosition(paddlePosX, paddlePosY - 5 - 45);
 				allObjects.setImagePlayerPaddle(*paddleToMove);
 			}
 		}
@@ -54,23 +54,23 @@ public:
 	}
 	void moveBotPaddle()
 	{
-		Image* newBotImage=allObjects.getBotPaddleImageAddr();
+		Image* newBotImage = allObjects.getBotPaddleImageAddr();
 		float botPosY = allObjects.getBotPaddleImage().getCenterY();
 		float ballPosY = allObjects.getBallImage().getCenterY();
 		float botPosX = allObjects.getBotPaddleImage().getCenterX();
 		if(botPosY < ballPosY)
 		{
-			if(botPosY<360)
+			if(botPosY < 360)
 				botPosY += 5;
 		}
 		else if(botPosY > ballPosY)
 		{
-			if(botPosY>40)
+			if(botPosY > 40)
 				botPosY -= 5;
 		}
 		newBotImage->setCenterY(botPosY);
 		newBotImage->setCenterX(botPosX);
-		newBotImage->setSpritePosition(botPosX, botPosY-45);
+		newBotImage->setSpritePosition(botPosX, botPosY - 45);
 		allObjects.setImageBot(*newBotImage);
 	}
 	void moveBall(sf::Vector2f movementDirection)
@@ -80,7 +80,7 @@ public:
 		float newBallPosY = ball->getCenterY() + movementDirection.y;
 		ball->setCenterX(newBallPosX);
 		ball->setCenterY(newBallPosY);
-		ball->setSpritePosition(newBallPosX-13, newBallPosY-14);
+		ball->setSpritePosition(newBallPosX - 13, newBallPosY - 14);
 		allObjects.setImageBall(*ball);
 	}
 	Model getAllObjects()

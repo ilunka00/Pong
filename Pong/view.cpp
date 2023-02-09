@@ -1,14 +1,13 @@
 #ifndef VIEW
 #define VIEW
-#include <SFML/Graphics.hpp>
 #include "model.cpp"
 #include "stats.cpp"
-namespace mvcV//mvcView
+#include <SFML/Graphics.hpp>
+namespace mvcV //mvcView
 {
 class View
 {
 public:
-
 	void drawAllObjects(sf::RenderWindow& window, Model& objectToDraw, Statistics& gameStats)
 	{
 		Image* ballToDraw = objectToDraw.getBallImageAddr();
@@ -33,5 +32,5 @@ public:
 		window.draw(arrows);
 	}
 };
-} // namespace mvcView
+} // namespace mvcV
 #endif // !VIEW

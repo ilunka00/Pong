@@ -2,21 +2,20 @@
 #include "model.cpp"
 #include "stats.cpp"
 #include "view.cpp"
-#include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
 
 using namespace sf;
-
 
 int main()
 {
 	RenderWindow window(VideoMode(700, 400), "Pong");
 	Game game;
-	Clock ballClock,botClock;
+	Clock ballClock, botClock;
 	float ballDelay = 0.f;
 	float botDelay = 0.f;
 	game.setup();
-	while (window.isOpen())
+	while(window.isOpen())
 	{
 		ballDelay += ballClock.getElapsedTime().asSeconds();
 		ballClock.restart();
@@ -37,4 +36,3 @@ int main()
 	}
 	return 0;
 }
-

@@ -1,12 +1,11 @@
 #ifndef GAME
 #define GAME
-#include <SFML/Graphics.hpp>
-#include "view.cpp"
-#include "image.cpp"
-#include "stats.cpp"
-#include "soundpad.cpp"
 #include "controller.cpp"
-
+#include "image.cpp"
+#include "soundpad.cpp"
+#include "stats.cpp"
+#include "view.cpp"
+#include <SFML/Graphics.hpp>
 
 using namespace sf;
 
@@ -16,7 +15,7 @@ private:
 	Controller controller;
 	sf::Vector2f ballDirection;
 	Statistics stats;
-	snd::Soundpad sounds; 
+	snd::Soundpad sounds;
 
 public:
 	Game()
@@ -48,7 +47,7 @@ public:
 				{
 					srand(time(NULL));
 					ballDirection.x = 1;
-					ballDirection.y = rand()%3+1;
+					ballDirection.y = rand() % 3 + 1;
 				}
 			}
 			else if(event.type == Event::KeyPressed)
@@ -64,7 +63,7 @@ public:
 	{
 		float ballPosX = controller.getAllObjects().getBallImage().getCenterX();
 		float ballPosY = controller.getAllObjects().getBallImage().getCenterY();
-		if (ballPosY < 15)
+		if(ballPosY < 15)
 		{
 			if(ballDirection.y < 0)
 			{
@@ -72,7 +71,7 @@ public:
 				ballDirection.y *= -1;
 			}
 		}
-		if (ballPosY > 385)
+		if(ballPosY > 385)
 		{
 			if(ballDirection.y > 0)
 			{
@@ -80,10 +79,10 @@ public:
 				ballDirection.y *= -1;
 			}
 		}
-		if (ballPosX > 630)
+		if(ballPosX > 630)
 		{
 			float paddlePosY = controller.getAllObjects().getBotPaddleImage().getCenterY();
-			if (paddleHit(ballPosY, paddlePosY))
+			if(paddleHit(ballPosY, paddlePosY))
 			{
 				sounds.paddleHitSound();
 				if(ballDirection.x > 0)
@@ -94,7 +93,7 @@ public:
 				goal(true);
 			}
 		}
-		if (ballPosX < 60)
+		if(ballPosX < 60)
 		{
 			float paddlePosY = controller.getAllObjects().getPlayerPaddleImage().getCenterY();
 			if(paddleHit(ballPosY, paddlePosY))
@@ -122,11 +121,11 @@ public:
 		else
 			return false;
 	}
-	void goal(bool playerGoal) 
+	void goal(bool playerGoal)
 	{
 		sounds.goalSound();
 
-		if (playerGoal)
+		if(playerGoal)
 		{
 			stats.botGoal();
 			controller.setup();

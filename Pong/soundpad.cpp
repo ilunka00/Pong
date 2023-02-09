@@ -21,7 +21,7 @@ public:
 		borderHitS.setBuffer(borderHit);
 		ost.openFromFile("music.wav");
 	}
-	void loadSounds() 
+	void loadSounds()
 	{
 		goal.loadFromFile("goal.wav");
 		paddleHit.loadFromFile("paddlehit.wav");
