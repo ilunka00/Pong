@@ -12,7 +12,7 @@ public:
 		botPaddleModel.loadFromFile("paddle.png");
 		botPaddleModel.setCenterX(640);
 		botPaddleModel.setCenterY(200);
-		botPaddleModel.setPosition(640, 200);
+		botPaddleModel.setSpritePosition(640, 200);
 	}
 	Image getBotPaddleImage()
 	{

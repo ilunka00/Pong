@@ -12,7 +12,7 @@ protected:
 	float centerX=0, centerY=0;
 
 public:
-	void setPosition(int a, int b)
+	void setSpritePosition(int a, int b)
 	{
 		sprite.setPosition(a, b);
 	}

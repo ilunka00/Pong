@@ -4,6 +4,7 @@
 #include "view.cpp"
 #include "image.cpp"
 #include "stats.cpp"
+#include "soundpad.cpp"
 #include "controller.cpp"
 
 
@@ -15,10 +16,12 @@ private:
 	Controller controller;
 	sf::Vector2f ballDirection;
 	Statistics stats;
+	snd::Soundpad sounds; 
 
 public:
 	Game()
 	{
+		sounds.loadSounds();
 		controller = Controller();
 		stats = Statistics();
 		ballDirection.x = 0.f;
@@ -26,12 +29,14 @@ public:
 	}
 	void setup()
 	{
+		sounds.playMusic();
 		controller.setup();
 		stats.setup();
 	}
 	void update(sf::RenderWindow& window)
 	{
-
+		if(stats.getScoreBot() == 5 || stats.getScorePlayer() == 5)
+			window.close();
 		Event event;
 		while(window.pollEvent(event))
 		{
@@ -62,19 +67,25 @@ public:
 		if (ballPosY < 15)
 		{
 			if(ballDirection.y < 0)
+			{
+				sounds.borderHitSound();
 				ballDirection.y *= -1;
+			}
 		}
 		if (ballPosY > 385)
 		{
 			if(ballDirection.y > 0)
+			{
+				sounds.borderHitSound();
 				ballDirection.y *= -1;
+			}
 		}
 		if (ballPosX > 630)
 		{
 			float paddlePosY = controller.getAllObjects().getBotPaddleImage().getCenterY();
 			if (paddleHit(ballPosY, paddlePosY))
 			{
-				//TODO PADDLE HIT SOUND
+				sounds.paddleHitSound();
 				if(ballDirection.x > 0)
 					ballDirection.x *= -1;
 			}
@@ -88,7 +99,7 @@ public:
 			float paddlePosY = controller.getAllObjects().getPlayerPaddleImage().getCenterY();
 			if(paddleHit(ballPosY, paddlePosY))
 			{
-				//TODO PADDLE HIT SOUND
+				sounds.paddleHitSound();
 				if(ballDirection.x < 0)
 					ballDirection.x *= -1;
 			}
@@ -113,7 +124,7 @@ public:
 	}
 	void goal(bool playerGoal) 
 	{
-		//TODO GOAL SOUND
+		sounds.goalSound();
 
 		if (playerGoal)
 		{

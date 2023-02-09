@@ -38,7 +38,7 @@ public:
 			if(paddlePosY > 40)
 			{
 				paddleToMove->setCenterY(paddlePosY - 5);
-				paddleToMove->setPosition(paddlePosX, paddlePosY - 5 -45);
+				paddleToMove->setSpritePosition(paddlePosX, paddlePosY - 5 -45);
 				allObjects.setImagePlayerPaddle(*paddleToMove);
 			}
 		}
@@ -47,7 +47,7 @@ public:
 			if(paddlePosY < 360)
 			{
 				paddleToMove->setCenterY(paddlePosY + 5);
-				paddleToMove->setPosition(paddlePosX, paddlePosY + 5 - 45);
+				paddleToMove->setSpritePosition(paddlePosX, paddlePosY + 5 - 45);
 				allObjects.setImagePlayerPaddle(*paddleToMove);
 			}
 		}
@@ -70,7 +70,7 @@ public:
 		}
 		newBotImage->setCenterY(botPosY);
 		newBotImage->setCenterX(botPosX);
-		newBotImage->setPosition(botPosX, botPosY-45);
+		newBotImage->setSpritePosition(botPosX, botPosY-45);
 		allObjects.setImageBot(*newBotImage);
 	}
 	void moveBall(sf::Vector2f movementDirection)
@@ -80,7 +80,7 @@ public:
 		float newBallPosY = ball->getCenterY() + movementDirection.y;
 		ball->setCenterX(newBallPosX);
 		ball->setCenterY(newBallPosY);
-		ball->setPosition(newBallPosX-13, newBallPosY-14);
+		ball->setSpritePosition(newBallPosX-13, newBallPosY-14);
 		allObjects.setImageBall(*ball);
 	}
 	Model getAllObjects()

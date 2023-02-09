@@ -15,9 +15,9 @@ public:
 		playerPaddleModel.loadFromFile("paddle.png");
 		ballModel.setCenterX(350);
 		ballModel.setCenterY(200);
-		ballModel.setPosition(350, 200);
-		botPaddleModel.setPosition(640, 200);
-		playerPaddleModel.setPosition(30, 200);
+		ballModel.setSpritePosition(350, 200);
+		botPaddleModel.setSpritePosition(640, 200);
+		playerPaddleModel.setSpritePosition(30, 200);
 	}
 	void setup()
 	{
@@ -26,9 +26,11 @@ public:
 		playerPaddleModel.loadFromFile("paddle.png");
 		ballModel.setCenterX(350);
 		ballModel.setCenterY(200);
-		ballModel.setPosition(350-14, 200-15);
-		botPaddleModel.setPosition(640, 200-45);
-		playerPaddleModel.setPosition(30, 200-45);
+		ballModel.setSpritePosition(350-14, 200-15);
+		botPaddleModel.setCenterY(200);
+		botPaddleModel.setSpritePosition(640, 200-45);
+		playerPaddleModel.setCenterY(200);
+		playerPaddleModel.setSpritePosition(30, 200-45);
 	}
 	};
 #endif

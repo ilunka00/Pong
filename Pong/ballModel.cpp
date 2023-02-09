@@ -12,7 +12,7 @@ public:
 		ballModel.loadFromFile("ball.png");
 		ballModel.setCenterX(350);
 		ballModel.setCenterY(200);
-		ballModel.setPosition(350, 200);
+		ballModel.setSpritePosition(350, 200);
 	}
 	Image getBallImage()
 	{

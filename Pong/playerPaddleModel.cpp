@@ -13,7 +13,7 @@ public:
 		playerPaddleModel.loadFromFile("paddle.png");
 		playerPaddleModel.setCenterX(30);
 		playerPaddleModel.setCenterY(200);
-		playerPaddleModel.setPosition(30, 200);
+		playerPaddleModel.setSpritePosition(30, 200);
 	}
 	Image getPlayerPaddleImage()
 	{
